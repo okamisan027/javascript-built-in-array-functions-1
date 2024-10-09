@@ -7,6 +7,12 @@ const students = [
 
 function getAverageStudentScore(students) {
   // Start coding here
+  //หาค่าเฉลี่ยของคะแนนแต่ละคน
+  const result = students.reduce((total, currentStudent) => {
+    console.log(total + currentStudent.score);
+    return total + currentStudent.score;
+  }, 0);
+  return result / students.length;
 }
 
-getAverageStudentScore(students); // Output: 87.5
+console.log(getAverageStudentScore(students)); // Output: 87.5

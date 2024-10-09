@@ -8,9 +8,17 @@ const todos = [
 
 function getTodoTopics(todos) {
   // Start coding here
+  //เอาเฉพาะ topic ออกมาเป็นอาเรย์ใหม่
+  //ใช้ .map //***********ติดไว้ก่อน */
+  let result = todos.map((eachTodo) => {
+    return eachTodo.topic.toString();
+  });
+
+  return result;
 }
 
 getTodoTopics(todos);
+console.log(getTodoTopics(todos));
 
 /* 
 	Output:
